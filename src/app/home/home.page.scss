@@ -1,27 +1,52 @@
-#container {
-  text-align: center;
+ion-header {
+  height: 120px;
+  width: 100%;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  ion-toolbar {
+    display: inline-flex;
+    height: 120px;
+
+    ion-title {
+      font-family: monospace;
+      color: #fff;
+      margin: 10px 0;
+
+      @media screen and (max-width: 767px) {
+        span {
+          font-size: 1.5em;
+        }
+      }
+      @media screen and (min-width: 500px) {
+        span {
+          font-size: 2em;
+        }
+      }
+    }
+  }
+}
+@font-face {
+  font-family: pixel-craft;
+  src: url('../fonts/pixel-craft.ttf');
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
+ion-content {
   margin: 0;
-}
+  padding: 0;
 
-#container a {
-  text-decoration: none;
+  [game] {
+    position: relative;
+    min-height: 500px;
+    min-width: 250px;
+    border-radius: 20px;
+    margin: 15px;
+    background-color: #fff;
+    overflow: hidden;
+
+    .bloco {
+      position: absolute;
+      width: 60px;
+      left: calc(50% - 30px);
+      bottom: 50%;
+    }
+  }
 }
